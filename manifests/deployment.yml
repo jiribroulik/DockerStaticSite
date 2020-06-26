@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "aksworkshop14905-6870"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "aksworkshop14905-6870"
+    spec:
+      containers:
+        - name: "aksworkshop14905-6870"
+          image: "acr32057.azurecr.io/aksworkshop14905"
+          ports:
+          - containerPort: 80
